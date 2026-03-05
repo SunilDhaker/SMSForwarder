@@ -20,5 +20,10 @@ build/
 captures/
 
 # Signing artifacts
+keystore.properties
 *.jks
 *.keystore
+*.p12
+*.pem
+*.der
+*.pk8

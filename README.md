@@ -36,6 +36,26 @@ No personal or pre-seeded forwarding rules are included by default.
 ./gradlew testDebugUnitTest
 ```
 
+## Release Signing
+1. Create a release keystore (one-time):
+```bash
+keytool -genkeypair -v -keystore release.keystore -alias smsforwarder -keyalg RSA -keysize 2048 -validity 10000
+```
+2. Create local signing config:
+```bash
+cp keystore.properties.example keystore.properties
+```
+3. Fill `keystore.properties` with real credentials.
+4. Build release APK:
+```bash
+./gradlew assembleRelease
+```
+
+The build script reads signing values from either:
+- `keystore.properties` (`storeFile`, `storePassword`, `keyAlias`, `keyPassword`)
+- or CI environment variables:
+  `ANDROID_SIGNING_STORE_FILE`, `ANDROID_SIGNING_STORE_PASSWORD`, `ANDROID_SIGNING_KEY_ALIAS`, `ANDROID_SIGNING_KEY_PASSWORD`
+
 ## Permissions
 - `RECEIVE_SMS`: receive incoming SMS
 - `SEND_SMS`: forward via SMS target
@@ -50,4 +70,3 @@ No personal or pre-seeded forwarding rules are included by default.
 
 ## License
 MIT. See [LICENSE](LICENSE).
-

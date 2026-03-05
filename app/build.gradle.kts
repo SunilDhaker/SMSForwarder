@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +7,28 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
 }
+
+val keystoreProperties = Properties()
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.inputStream().use { keystoreProperties.load(it) }
+}
+
+fun signingValue(propertyName: String, envName: String): String? {
+    return providers.environmentVariable(envName).orNull
+        ?: keystoreProperties.getProperty(propertyName)
+}
+
+val signingStoreFilePath = signingValue("storeFile", "ANDROID_SIGNING_STORE_FILE")
+val signingStorePassword = signingValue("storePassword", "ANDROID_SIGNING_STORE_PASSWORD")
+val signingKeyAlias = signingValue("keyAlias", "ANDROID_SIGNING_KEY_ALIAS")
+val signingKeyPassword = signingValue("keyPassword", "ANDROID_SIGNING_KEY_PASSWORD")
+val hasReleaseSigning = listOf(
+    signingStoreFilePath,
+    signingStorePassword,
+    signingKeyAlias,
+    signingKeyPassword
+).all { !it.isNullOrBlank() }
 
 android {
     namespace = "personal.smsforwarder"
@@ -23,9 +47,25 @@ android {
         }
     }
 
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = rootProject.file(signingStoreFilePath!!)
+                storePassword = signingStorePassword
+                keyAlias = signingKeyAlias
+                keyPassword = signingKeyPassword
+                enableV1Signing = true
+                enableV2Signing = true
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            if (hasReleaseSigning) {
+                signingConfig = signingConfigs.getByName("release")
+            }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
