@@ -1,0 +1,24 @@
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+
+# Local machine config
+local.properties
+
+# Gradle and Kotlin state
+.gradle/
+.kotlin/
+
+# Native build artifacts
+.externalNativeBuild/
+.cxx/
+
+# Build outputs
+build/
+**/build/
+captures/
+
+# Signing artifacts
+*.jks
+*.keystore
