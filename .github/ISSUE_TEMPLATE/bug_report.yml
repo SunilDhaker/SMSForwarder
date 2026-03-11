@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a reproducible defect in SMS Forwarder
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Reproducible reports get fixed faster.
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      placeholder: v1.1.0
+    validations:
+      required: true
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+      placeholder: Android 14
+    validations:
+      required: true
+  - type: textarea
+    id: rule_config
+    attributes:
+      label: Rule configuration
+      description: Describe the rule or target involved
+      placeholder: Sender regex, body regex, SMS target, webhook target
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Create rule ...
+        2. Receive SMS ...
+        3. Open History ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      render: shell

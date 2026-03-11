@@ -1,0 +1,42 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="52" y1="44" x2="1228" y2="596" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1223"/>
+      <stop offset="0.6" stop-color="#12274D"/>
+      <stop offset="1" stop-color="#183560"/>
+    </linearGradient>
+    <linearGradient id="card" x1="740" y1="150" x2="1110" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1ED5A6"/>
+      <stop offset="1" stop-color="#37B3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" rx="32" fill="url(#bg)"/>
+  <circle cx="1160" cy="108" r="140" fill="#1ED5A6" fill-opacity="0.08"/>
+  <circle cx="124" cy="560" r="170" fill="#37B3FF" fill-opacity="0.08"/>
+
+  <text x="90" y="176" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="68" font-weight="700">SMS Forwarder</text>
+  <text x="90" y="232" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="28">Forward SMS to webhooks or another phone using regex rules.</text>
+
+  <rect x="90" y="286" width="204" height="44" rx="22" fill="#1ED5A6" fill-opacity="0.18"/>
+  <text x="118" y="314" fill="#9EF4DE" font-family="Arial, sans-serif" font-size="20" font-weight="700">Android 11+</text>
+  <rect x="308" y="286" width="206" height="44" rx="22" fill="#37B3FF" fill-opacity="0.18"/>
+  <text x="336" y="314" fill="#B7E5FF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Webhook + SMS</text>
+
+  <text x="90" y="386" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Use it for:</text>
+  <text x="90" y="424" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• OTP and alert relays</text>
+  <text x="90" y="460" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• spare Android gateway devices</text>
+  <text x="90" y="496" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• self-hosted message automation</text>
+
+  <rect x="728" y="108" width="462" height="424" rx="32" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="764" y="146" width="390" height="114" rx="26" fill="url(#card)"/>
+  <text x="796" y="194" fill="#071321" font-family="Arial, sans-serif" font-size="28" font-weight="700">Rules</text>
+  <text x="796" y="228" fill="#071321" font-family="Arial, sans-serif" font-size="18">Match sender/body, rewrite text, forward to SMS or webhook.</text>
+
+  <rect x="764" y="280" width="390" height="104" rx="26" fill="#EEF7FF"/>
+  <text x="796" y="324" fill="#0F2D4F" font-family="Arial, sans-serif" font-size="28" font-weight="700">History</text>
+  <text x="796" y="356" fill="#41627F" font-family="Arial, sans-serif" font-size="18">Inspect forwarding attempts and debug rule behavior.</text>
+
+  <rect x="764" y="404" width="390" height="90" rx="26" fill="#F5FFF9"/>
+  <text x="796" y="444" fill="#0D755A" font-family="Arial, sans-serif" font-size="28" font-weight="700">Reliability</text>
+  <text x="796" y="472" fill="#2B6B58" font-family="Arial, sans-serif" font-size="18">Keep forwarding alive with service and battery controls.</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="1360" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1324"/>
+      <stop offset="0.55" stop-color="#102347"/>
+      <stop offset="1" stop-color="#152C54"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="180" y1="180" x2="650" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1ED5A6"/>
+      <stop offset="1" stop-color="#37B3FF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="1000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="30" stdDeviation="30" flood-color="#06111E" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="900" rx="32" fill="url(#bg)"/>
+  <circle cx="1210" cy="148" r="180" fill="#1ED5A6" fill-opacity="0.08"/>
+  <circle cx="132" cy="772" r="210" fill="#37B3FF" fill-opacity="0.08"/>
+  <rect x="76" y="76" width="1288" height="748" rx="28" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <text x="116" y="176" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="64" font-weight="700">SMS Forwarder</text>
+  <text x="116" y="226" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="26">Rule-based Android SMS routing for webhooks, backup phones, and automation flows.</text>
+
+  <rect x="116" y="272" width="208" height="44" rx="22" fill="#1ED5A6" fill-opacity="0.18"/>
+  <text x="144" y="301" fill="#9EF4DE" font-family="Arial, sans-serif" font-size="20" font-weight="700">Regex matching</text>
+  <rect x="338" y="272" width="200" height="44" rx="22" fill="#37B3FF" fill-opacity="0.18"/>
+  <text x="366" y="301" fill="#B7E5FF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Webhook + SMS</text>
+  <rect x="552" y="272" width="230" height="44" rx="22" fill="#FFC857" fill-opacity="0.18"/>
+  <text x="580" y="301" fill="#FFE2A7" font-family="Arial, sans-serif" font-size="20" font-weight="700">On-device history</text>
+
+  <rect x="116" y="360" width="288" height="84" rx="24" fill="url(#accent)"/>
+  <text x="148" y="398" fill="#071321" font-family="Arial, sans-serif" font-size="22" font-weight="700">Latest signed APK</text>
+  <text x="148" y="429" fill="#071321" font-family="Arial, sans-serif" font-size="18">GitHub Releases • Android 11+</text>
+
+  <text x="116" y="520" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Designed for:</text>
+  <text x="116" y="560" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• self-hosted webhooks and alert routing</text>
+  <text x="116" y="596" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• forwarding from a spare Android relay device</text>
+  <text x="116" y="632" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• filtering noisy provider messages before relay</text>
+  <text x="116" y="668" fill="#D5E4FF" font-family="Arial, sans-serif" font-size="22">• debugging rules with local history and tester screens</text>
+
+  <g filter="url(#shadow)">
+    <rect x="824" y="178" width="168" height="344" rx="28" fill="#0F1728" stroke="#CBE0FF" stroke-opacity="0.2"/>
+    <rect x="844" y="208" width="128" height="264" rx="18" fill="#F5F8FF"/>
+    <rect x="844" y="208" width="128" height="42" rx="18" fill="#EAF2FF"/>
+    <text x="868" y="235" fill="#112A4D" font-family="Arial, sans-serif" font-size="18" font-weight="700">Rules</text>
+    <rect x="856" y="268" width="104" height="56" rx="16" fill="#E2FFF7"/>
+    <text x="866" y="293" fill="#0D755A" font-family="Arial, sans-serif" font-size="14" font-weight="700">Bank Alerts</text>
+    <text x="866" y="311" fill="#266B57" font-family="Arial, sans-serif" font-size="11">sender: .*BANK.*</text>
+    <rect x="856" y="336" width="104" height="56" rx="16" fill="#EAF4FF"/>
+    <text x="866" y="361" fill="#19558B" font-family="Arial, sans-serif" font-size="14" font-weight="700">OTP Relay</text>
+    <text x="866" y="379" fill="#35668F" font-family="Arial, sans-serif" font-size="11">body: .*OTP.*</text>
+    <rect x="856" y="410" width="104" height="42" rx="14" fill="#152C54"/>
+    <text x="887" y="436" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="13" font-weight="700">Add Rule</text>
+
+    <rect x="1018" y="146" width="168" height="376" rx="28" fill="#0F1728" stroke="#CBE0FF" stroke-opacity="0.2"/>
+    <rect x="1038" y="176" width="128" height="296" rx="18" fill="#F5F8FF"/>
+    <rect x="1038" y="176" width="128" height="42" rx="18" fill="#EAF2FF"/>
+    <text x="1054" y="203" fill="#112A4D" font-family="Arial, sans-serif" font-size="18" font-weight="700">History</text>
+    <rect x="1050" y="236" width="104" height="64" rx="16" fill="#F3FFF9"/>
+    <circle cx="1064" cy="253" r="5" fill="#18B385"/>
+    <text x="1076" y="257" fill="#0F2D4F" font-family="Arial, sans-serif" font-size="13" font-weight="700">VM-BANK</text>
+    <text x="1058" y="277" fill="#4D6077" font-family="Arial, sans-serif" font-size="10">1 success • webhook</text>
+    <text x="1058" y="292" fill="#0F2D4F" font-family="Arial, sans-serif" font-size="10">Your OTP is 123456</text>
+    <rect x="1050" y="312" width="104" height="64" rx="16" fill="#FFF8EA"/>
+    <circle cx="1064" cy="329" r="5" fill="#F4A938"/>
+    <text x="1076" y="333" fill="#0F2D4F" font-family="Arial, sans-serif" font-size="13" font-weight="700">BZ-DELIV</text>
+    <text x="1058" y="353" fill="#4D6077" font-family="Arial, sans-serif" font-size="10">matched • sms target</text>
+    <text x="1058" y="368" fill="#0F2D4F" font-family="Arial, sans-serif" font-size="10">Package arriving today</text>
+    <rect x="1050" y="390" width="104" height="46" rx="14" fill="#EEF4FF"/>
+    <text x="1075" y="418" fill="#19558B" font-family="Arial, sans-serif" font-size="12" font-weight="700">Rule Tester</text>
+
+    <rect x="1212" y="198" width="168" height="324" rx="28" fill="#0F1728" stroke="#CBE0FF" stroke-opacity="0.2"/>
+    <rect x="1232" y="228" width="128" height="244" rx="18" fill="#F5F8FF"/>
+    <rect x="1232" y="228" width="128" height="42" rx="18" fill="#EAF2FF"/>
+    <text x="1240" y="255" fill="#112A4D" font-family="Arial, sans-serif" font-size="17" font-weight="700">Reliability</text>
+    <rect x="1244" y="288" width="104" height="56" rx="16" fill="#E2FFF7"/>
+    <text x="1256" y="314" fill="#0D755A" font-family="Arial, sans-serif" font-size="13" font-weight="700">Service running</text>
+    <text x="1256" y="332" fill="#266B57" font-family="Arial, sans-serif" font-size="11">Foreground mode</text>
+    <rect x="1244" y="356" width="104" height="56" rx="16" fill="#FFF2F2"/>
+    <text x="1256" y="382" fill="#A63B3B" font-family="Arial, sans-serif" font-size="13" font-weight="700">Battery check</text>
+    <text x="1256" y="400" fill="#A65A5A" font-family="Arial, sans-serif" font-size="11">Android settings</text>
+  </g>
+</svg>
